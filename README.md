@@ -1,3 +1,3 @@
 # oscvizag
 
-Visit [oscvizag](oscvizag.github.io) to enter website
+Visit [oscvizag](https://oscvizag.github.io/) to enter website
