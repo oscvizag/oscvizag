@@ -170,7 +170,7 @@ p {
 	cursor: pointer
 }
 .slide-nav-btn-active {
-	color: #fff
+	color:rgb(0, 0,0);
 }
 .slide-nav-btn-active p {
 	background: 0 0
@@ -178,12 +178,12 @@ p {
 .slide-nav-btn-active p:before {
 	top: 0;
 	transform: rotate(-315deg);
-	background: #fff
+	background: rgb(0, 0,0);
 }
 .slide-nav-btn-active p:after {
 	top: 0;
 	transform: rotate(315deg);
-	background: #fff
+	background: rgb(0, 0,0);
 }
 .slide-nav-left {
 	position: fixed;
@@ -204,9 +204,8 @@ p {
 	color: #000
 }
 .slide-nav {
-	background: #0f2027;
-	background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
-	background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+	background:#ffffff;
+	
 	position: fixed;
 	right: 0;
 	top: 0;
@@ -234,7 +233,7 @@ p {
 	font-weight: 700
 }
 .slide-nav ul li a {
-	color: #fff;
+	color: rgb(0, 0,0);
 	letter-spacing: 4px;
 }
 .home {
