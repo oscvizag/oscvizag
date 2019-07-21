@@ -1,6 +1,48 @@
-
-
-!function(t){var e={},l=function(e){var l=[],o=e.dir&&"left"===e.dir?"scrollLeft":"scrollTop";return this.each(function(){var e=t(this);if(this!==document&&this!==window)return!document.scrollingElement||this!==document.documentElement&&this!==document.body?void(e[o]()>0?l.push(this):(e[o](1),e[o]()>0&&l.push(this),e[o](0))):(l.push(document.scrollingElement),!1)}),l.length||this.each(function(){this===document.documentElement&&"smooth"===t(this).css("scrollBehavior")&&(l=[this]),l.length||"BODY"!==this.nodeName||(l=[this])}),"first"===e.el&&l.length>1&&(l=[l[0]]),l},o=/^([\-\+]=)(\d+)/;t.fn.extend({scrollable:function(t){var e=l.call(this,{dir:t});return this.pushStack(e)},firstScrollable:function(t){var e=l.call(this,{el:"first",dir:t});return this.pushStack(e)},smoothScroll:function(e,l){if("options"===(e=e||{}))return l?this.each(function(){var e=t(this),o=t.extend(e.data("ssOpts")||{},l);t(this).data("ssOpts",o)}):this.first().data("ssOpts");var o=t.extend({},t.fn.smoothScroll.defaults,e),s=function(e){var l=function(t){return t.replace(/(:|\.|\/)/g,"\\$1")},s=t(this),n=t.extend({},o,s.data("ssOpts")||{}),r=o.exclude,i=n.excludeWithin,c=0,a=0,h=!0,f={},u=t.smoothScroll.filterPath(location.pathname),d=t.smoothScroll.filterPath(this.pathname),m=location.hostname===this.hostname||!this.hostname,p=n.scrollTarget||d===u,g=l(this.hash);if(g&&!t(g).length&&(h=!1),n.scrollTarget||m&&p&&g){for(;h&&c<r.length;)s.is(l(r[c++]))&&(h=!1);for(;h&&a<i.length;)s.closest(i[a++]).length&&(h=!1)}else h=!1;h&&(n.preventDefault&&e.preventDefault(),t.extend(f,n,{scrollTarget:n.scrollTarget||g,link:this}),t.smoothScroll(f))};return null!==e.delegateSelector?this.off("click.smoothscroll",e.delegateSelector).on("click.smoothscroll",e.delegateSelector,s):this.off("click.smoothscroll").on("click.smoothscroll",s),this}});var s=function(t){var e={relative:""},l="string"==typeof t&&o.exec(t);return"number"==typeof t?e.px=t:l&&(e.relative=l[1],e.px=parseFloat(l[2])||0),e},n=function(e){var l=t(e.scrollTarget);e.autoFocus&&l.length&&(l[0].focus(),l.is(document.activeElement)||(l.prop({tabIndex:-1}),l[0].focus())),e.afterScroll.call(e.link,e)};t.smoothScroll=function(l,o){if("options"===l&&"object"==typeof o)return t.extend(e,o);var r,i,c,a,h=s(l),f=0,u="offset",d="scrollTop",m={},p={};h.px?r=t.extend({link:null},t.fn.smoothScroll.defaults,e):((r=t.extend({link:null},t.fn.smoothScroll.defaults,l||{},e)).scrollElement&&(u="position","static"===r.scrollElement.css("position")&&r.scrollElement.css("position","relative")),o&&(h=s(o))),d="left"===r.direction?"scrollLeft":d,r.scrollElement?(i=r.scrollElement,h.px||/^(?:HTML|BODY)$/.test(i[0].nodeName)||(f=i[d]())):i=t("html, body").firstScrollable(r.direction),r.beforeScroll.call(i,r),a=h.px?h:{relative:"",px:t(r.scrollTarget)[u]()&&t(r.scrollTarget)[u]()[r.direction]||0},m[d]=a.relative+(a.px+f+r.offset),"auto"===(c=r.speed)&&(c=Math.abs(m[d]-i[d]())/r.autoCoefficient),p={duration:c,easing:r.easing,complete:function(){n(r)}},r.step&&(p.step=r.step),i.length?i.stop().animate(m,p):n(r)},t.smoothScroll.version="2.2.0",t.smoothScroll.filterPath=function(t){return(t=t||"").replace(/^\//,"").replace(/(?:index|default).[a-zA-Z]{3,4}$/,"").replace(/\/$/,"")},t.fn.smoothScroll.defaults={exclude:[],excludeWithin:[],offset:0,direction:"top",delegateSelector:null,scrollElement:null,scrollTarget:null,autoFocus:!1,beforeScroll:function(){},afterScroll:function(){},easing:"swing",speed:400,autoCoefficient:2,preventDefault:!0}}(jQuery);
-
-
-!function(t){"function"==typeof define&&define.amd?define(["jquery"],t):"object"==typeof exports?t(require("jquery")):t(jQuery)}(function(t){var e=function(o,i){this.$element=t(o),this.options=t.extend({},e.DEFAULTS,this.dataOptions(),i),this.init()};e.DEFAULTS={from:0,to:0,speed:1e3,refreshInterval:100,decimals:0,formatter:function(t,e){return t.toFixed(e.decimals)},onUpdate:null,onComplete:null},e.prototype.init=function(){this.value=this.options.from,this.loops=Math.ceil(this.options.speed/this.options.refreshInterval),this.loopCount=0,this.increment=(this.options.to-this.options.from)/this.loops},e.prototype.dataOptions=function(){var t={from:this.$element.data("from"),to:this.$element.data("to"),speed:this.$element.data("speed"),refreshInterval:this.$element.data("refresh-interval"),decimals:this.$element.data("decimals")},e=Object.keys(t);for(var o in e){var i=e[o];void 0===t[i]&&delete t[i]}return t},e.prototype.update=function(){this.value+=this.increment,this.loopCount++,this.render(),"function"==typeof this.options.onUpdate&&this.options.onUpdate.call(this.$element,this.value),this.loopCount>=this.loops&&(clearInterval(this.interval),this.value=this.options.to,"function"==typeof this.options.onComplete&&this.options.onComplete.call(this.$element,this.value))},e.prototype.render=function(){var t=this.options.formatter.call(this.$element,this.value,this.options);this.$element.text(t)},e.prototype.restart=function(){this.stop(),this.init(),this.start()},e.prototype.start=function(){this.stop(),this.render(),this.interval=setInterval(this.update.bind(this),this.options.refreshInterval)},e.prototype.stop=function(){this.interval&&clearInterval(this.interval)},e.prototype.toggle=function(){this.interval?this.stop():this.start()},t.fn.countTo=function(o){return this.each(function(){var i=t(this),n=i.data("countTo"),s="object"==typeof o?o:{},r="string"==typeof o?o:"start";(!n||"object"==typeof o)&&(n&&n.stop(),i.data("countTo",n=new e(this,s))),n[r].call(n)})}});
+.event{
+    padding: 100px 0;
+    background: transparent;
+    }
+    .event .header{
+    margin-bottom: 50px
+    }
+    .event .owl-carousel .info {
+    position: relative;
+    overflow: hidden;
+    }
+    .event .owl-carousel .info img {
+    width: 100%;
+    height: 225px;
+    }
+    .event .owl-carousel .info .date {
+    position: absolute;
+    top: 3%;
+    background:#1a1a1a;
+    left: 3%;
+    color: #fff;
+    text-align: center;
+    padding: 4px 6px;
+    }
+    .event .owl-carousel .info .date p{
+    font-size: 12px
+    }
+    .event .owl-carousel .info .caption{
+    margin-top: 15px
+    }
+    .event .owl-carousel .info .caption h5>a {
+    font-size: 15px;
+    color: #1a1a1a
+    }
+    .event .owl-carousel .info .caption p {
+    font-size: 12px;
+    color: #aaa;
+    }
+    .blog .owl-carousel .info .caption .btn {
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    }
+    .event .owl-carousel .info .caption .btn>span {
+    font-size: 10px;
+    letter-spacing: 1px;
+    left: 40px;
+    }

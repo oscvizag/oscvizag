@@ -11,6 +11,9 @@
 	<link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
 	<link rel="stylesheet" href="css/plugins.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+
 </head>
 
 <body>
@@ -25,17 +28,17 @@
 	</div>
 	<div class="slide-nav-left hide-on-med-and-down">
 		<ul>
-			<li><a href="#home" title="About section"><i class="material-icons" style="font-size:25px;">home</i></a>
+			<li><a href="#home" title="Home section"><i class="material-icons" style="font-size:25px;">home</i></a>
 			</li>
-			<li><a href="#" title="Home section"><i class="material-icons"style="font-size:25px;">add_a_photo </i></a>
+			<li><a href="#about" title="About section"><i class="material-icons"style="font-size:25px;">details</i></a>
 			</li>
-			<li><a href="#" title="About section"><i class="material-icons" style="font-size:25px;">favorite</i></a>
+			<li><a href="#services" title="Service section"><i class="material-icons" style="font-size:25px;">favorite</i></a>
 			</li>
-			<li><a href="#services" title="Services section"><i class="material-icons" style="font-size:25px;">event</i></a>
+			<li><a href="#event" title="Event section"><i class="material-icons" style="font-size:25px;">event</i></a>
 			</li>
-			<li><a href="#" title="Prices section"><i class="material-icons" style="font-size:25px;">group_add</i></a>
+			<li><a href="#gallery" title="gallery section"><i class="material-icons" style="font-size:25px;">add_a_photo</i></a>
 			</li>
-			<li><a href="#" title="Portfolio section"><i class="material-icons"style="font-size:25px;">contact_mail</i></a>
+			<li><a href="#contact" title="contact section"><i class="material-icons"style="font-size:25px;">contact_mail</i></a>
 			</li>
 		</ul>
 	</div>
@@ -69,7 +72,7 @@
 		  <div class="row">
 			<div class="col s12 center-align">
 			  <div class="home-content">
-					<div class="container" style="padding-top:30px; " ><a id="logo-container" href="" target="_blank" class="brand-logo"> <img src="image/OSC_Transparent.png" width="responsive-img" height="305px"></a> </div>
+					<div class="container-fluid"><a id="logo-container" href="" target="_blank" class="brand-logo"> <img src="image/OSC_Transparent.png" width="responsive-img" height="305px"></a> </div>
 				  
 				<h4 class="h-style" style="font-family: 'Press Start 2P', cursive; font-size:4vw;">Open Student Community</h4>  <a href="#about" class="btn hover h-style"><span>know more</span></a>
 						<br>
@@ -86,15 +89,15 @@
 				<div class="col s12 m12 l6 center-align about-info">
 					<div class="carousel">
 						<a class="carousel-item" href="#one!">
-							<div class="hobby z-depth-2"><img src="image/Octocat.png"class="responsive-img" height="110px" alt="">
+							<div class="hobby z-depth-2"><img src="image/Octocat.png"class="responsive-img" height="40px" alt="">
 							</div>
 						</a>
 						<a class="carousel-item" href="#two!">
-							<div class="hobby z-depth-2"> <img src="image/acm.png"class="responsive-img" height="70px" alt="">
+							<div class="hobby z-depth-2"> <img src="image/acm.png"class="responsive-img" height="30px" alt="">
 							</div>
 						</a>
 						<a class="carousel-item" href="#three!">
-							<div class="hobby z-depth-2"> <img src="image/dsc_white.png"class="responsive-img" height="40px" alt="">
+							<div class="hobby z-depth-2"> <img src="image/dsc_white.png"class="responsive-img" height="30px" alt="">
 							</div>
 						</a>
 					</div>
@@ -117,19 +120,19 @@
 			</div>
 			<div class="row">
 				<div class="col s12 m6 l4">
-					<div class="info"> <i class="material-icons"></i>
+					<div class="info"> <i class="material-icons">movie_creation</i>
 						<h5>DESIGN</h5>
 						<p>dkjfdfogjojgorgjogj.</p>
 					</div>
 				</div>
 				<div class="col s12 m6 l4">
-					<div class="info"> <i class="material-icons"></i>
+					<div class="info"> <i class="material-icons">android</i>
 						<h5>DEVELOPMENT</h5>
 						<p>kkdngkngnglng.</p>
 					</div>
 				</div>
 				<div class="col s12 m6 l4">
-					<div class="info"> <i class="material-icons"></i>
+					<div class="info"> <i class="material-icons">build</i>
 						<h5>Workshops</h5>
 						<p>ldjejfonofg.</p>
 					</div>
@@ -137,7 +140,38 @@
 			</div>
 		</div>
 	</section>
-	<div class="slide-section" data-parallax="false">
+	<section class="event" id="event">
+			<div class="container">
+			  <!-- start header -->
+				<div class="header">
+				 <h6 class="h-style sub-title left-align">Latest Events</h6>
+				 <h5 class="h-style left-align"><span class="title">Events</span></h5>
+				</div>
+			   <!-- end header -->
+		  
+			   <div class="owl-carousel">
+				 <!-- start item [1] -->
+				 <div class="items">
+				  <div class="info">
+					<a href="#"><img alt="image" title="image" src="image/Octocat.png" width="20px"></a>
+					<div class="date">
+					<p>25</p>
+					<p><span>Sep, 2019</span></p>  
+					</div>
+					<div class="caption">
+					  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque massa dui, convallis sit amet lacus eu, iaculis volutpat mauris.</p>
+					  <a href="post.html" class="btn hover h-style"><span>READ MORE</span></a>
+					</div>
+				  </div>  
+				 </div>
+		
+			   </div>
+			</div>
+		  </section>
+		  
+		  
+	
+	<div class="slide-section" data-parallax="false" id="gallery">
 		<div class="container">
 			<div class="header">
 				<h6 class="h-style sub-title left-align">Get Clicked</h6>
@@ -164,102 +198,108 @@
 
 		
 		<section class="contact center-align" id="contact">
-			<h5 class="h-style">Get In Touch</h5>
-			<div class="container">
-				<div class="row">
-					<div class="col s12 m8 push-m2 l3">
-						<div class="row">
-							<div class="col s12">
-								<div class="info"> <span class="icon icon-envelope"></span>
-									<h6 class="h-style">Email Address</h6>
-									<p class="p-style">xxxxxxxxxxxxx</p>
+				<h5 class="h-style">Get In Touch</h5>
+				<div class="container">
+					<div class="row">
+						<div class="col s12 m8 push-m2 l3">
+							<div class="row">
+								<div class="col s12">
+									<div class="info"> <span class="material-icons">email</span>
+										<h6 class="h-style">Email Address</h6>
+										<p class="p-style">xxxxxxxxxxxxx</p>
+									</div>
 								</div>
-							</div>
-							<div class="col s12">
-								<div class="info"> <span class="icon icon-ribbon"></span>
-									<h6 class="h-style">Address</h6>
-									<p class="p-style">Vignan Visakhapatnam</p>
+								<div class="col s12">
+									<div class="info"> <span class="material-icons">adb</span>
+										<h6 class="h-style">Address</h6>
+										<p class="p-style">Vignan Visakhapatnam</p>
+									</div>
 								</div>
-							</div>
-							<div class="col s12">
-								<div class="info"> <span class="icon icon-mic"></span>
-									<h6 class="h-style">Phone Number</h6>
-									<p class="p-style">xxxxxxxxxx</p>
+								<div class="col s12">
+									<div class="info"> <span class="material-icons">phone</span>
+										<h6 class="h-style">Phone Number</h6>
+										<p class="p-style">xxxxxxxxxx</p>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<div class="col s12 m12 l6">
-						<div class="info">
-							<form>
-								<div class="input">
-									<input type="text" placeholder="User-Name" name=""> <span class="material-icons"></span>
-								</div>
-								<div class="input">
-									<input type="email" placeholder="E-mail" name=""> <span class="material-icons"></span>
-								</div>
-								<div class="subject">
-									<textarea placeholder="Subject"></textarea><span class="material-icons"></span>
-								</div>
-								<button class="submit h-style">Submit Now</button>
-							</form>
+						<div class="col s12 m12 l6">
+							<div class="info">
+								<form>
+									<div class="input">
+										<input type="text" placeholder="User-Name" name=""> <span class="material-icons">account_box</span>
+									</div>
+									<div class="input">
+										<input type="email" placeholder="E-mail" name=""> <span class="material-icons">email</span>
+									</div>
+									<div class="subject">
+										<textarea placeholder="message"></textarea><span class="material-icons">message</span>
+									</div>
+									
+									<button class="submit h-style">Submit Now</button>
+								</form>
+							</div>
 						</div>
-					</div>
-					<div class="col s12 m8 push-m2 l3">
-						<div class="row">
-							<div class="col s12">
-								<div class="info"> <span class="icon icon-happy"></span>
-									<h6 class="h-style">Happy Team</h6>
-									<p class="p-style">50</p>
+						<div class="col s12 m8 push-m2 l3">
+							<div class="row">
+								<div class="col s12">
+									<div class="info"> <span class="material-icons">tag_faces</span>
+										<h6 class="h-style">Happy Team</h6>
+										<p class="p-style">50</p>
+									</div>
 								</div>
-							</div>
-							<div class="col s12">
-								<div class="info"> <span class="icon icon-layers"></span>
-									<h6 class="h-style">Workshops</h6>
-									<p class="p-style">173</p>
+								<div class="col s12">
+									<div class="info"> <span class="material-icons">laptop_chromebook</span>
+										<h6 class="h-style">Workshops</h6>
+										<p class="p-style">173</p>
+									</div>
 								</div>
-							</div>
-							<div class="col s12">
-								<div class="info"> <span class="icon icon-gears"></span>
-									<h6 class="h-style">Hackthons</h6>
-									<p class="p-style">1</p>
+								<div class="col s12">
+									<div class="info"> <span class="material-icons">android</span>
+										<h6 class="h-style">Hackthons</h6>
+										<p class="p-style">1</p>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
-		<div class="footer center-align">
-			<div class="container">
-				<ul>
-					<li>
-						<a href="#">
-							<img src="image/fb.png" width="50px" alt="fb icon">
-						</a>
-					</li>
-					<li>
-						<a href="#">
-							<a href="">
-								<img src="image/twitter.png" width="50px">
+			</section>
+
+		
+			<div class="footer center-align">
+				<div class="container">
+					<ul>
+						<li>
+							<a href="#">
+								<img src="image/fb.png" width="50px" alt="fb icon">
 							</a>
-					</li>
-					<li>
-						<a href="#">
-							<img src="image/insta.png" alt="insta" width="50px">
-						</a>
-					</li>
-				</ul>
-				<h6 class="h-style center">© &nbsp;Copyright Open source student club.</h6>
-				<h6 class="h-style"> <a href="https://nitishsaikommaraju.ml/"> by &nbsp;🖤&nbsp;kommaraju Nitish Sai </a></h6>
+						</li>
+						<li>
+							<a href="#">
+								<a href="">
+									<img src="image/twitter.png" width="50px">
+								</a>
+						</li>
+						<li>
+							<a href="#">
+								<img src="image/insta.png" alt="insta" width="50px">
+							</a>
+						</li>
+					</ul>
+					<h6 class="h-style center">© &nbsp;Copyright Open Stundet Community.</h6>
+					<h6 class="h-style"> <a href="https://nitishsaikommaraju.ml/"> by &nbsp;🖤&nbsp;kommaraju Nitish Sai </a></h6>
+				</div>
 			</div>
-		</div>
+
 		<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="js/materialize.js"></script>
 		<script src="js/init.js"></script>
 		<script src="js/plugins.js"></script>
 		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 		<script src="js/jquery.smooth-scroll.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+
 </body>
 
 </html>
