@@ -772,14 +772,14 @@ input:not([type="email"]):focus:not([readonly]) {
         background: #4285F4;
     }
 }
-@media (min-width:350px) and (max-width:900px){
+/* @media (min-width:350px) and (max-width:900px){
         
     .home .circles.circle1 {
         animation: header-swing 5s infinite;
         height: 150px;
         width: 150px;
         opacity: .2;
-        left: -5%;
+        left: 2%;
         top: 66%;
         background: #ea4335;
     }
@@ -789,7 +789,7 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 120px;
         width: 120px;
         opacity: .2;
-        right: -4%;
+        right: 2%;
         top: 10%;
         background: #F4B400;
     }
@@ -799,7 +799,7 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 100px;
         width: 100px;
         opacity: .2;
-        left: 20%;
+        left: 2%;
         top: 50%;
         background: #ea4335;
     }
@@ -809,7 +809,7 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 150px;
         width: 150px;
         opacity: .2;
-        right: -10%;
+        right: 2%;
         top: 60%;
         background: #0F9D58;
     }
@@ -819,13 +819,13 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 150px;
         width: 150px;
         opacity: .2;
-        left: 32%;
+        left: 2%;
         bottom: 29%;
     }
     
     .home .circles.circle6 {
         animation: header-swing 9s infinite;
-        left: -8%;
+        left: 2%;
         top: 17%;
         height: 160px;
         width: 160px;
@@ -837,20 +837,20 @@ input:not([type="email"]):focus:not([readonly]) {
         animation: header-swing 6s infinite;
         width: 50px;
         height: 50px;
-        right: 4%;
+        right: 2%;
         top: 34%;
         opacity: .2;
         background: #4285F4;
     }
-}
-@media (max-width:350px){
+} */
+@media (max-width:900px){
     
     .home .circles.circle1 {
         animation: header-swing 4s infinite;
         height: 80px;
         width: 80px;
         opacity: .2;
-        left: -5%;
+        left: 5%;
         top: 72%;
         background: #ea4335;
     }
@@ -860,7 +860,7 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 80px;
         width: 80px;
         opacity: .2;
-        right: -4%;
+        right: 3%;
         top: 10%;
         background: #F4B400;
     }
@@ -870,7 +870,7 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 60px;
         width: 60px;
         opacity: .2;
-        right: 60%;
+        left: 20%;
         top: 50%;
         background: #4285F4;
 
@@ -881,7 +881,7 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 120px;
         width: 120px;
         opacity: .2;
-        right: -20%;
+        right: 3%;
         top: 57%;
         background: #0F9D58;
     }
@@ -891,14 +891,14 @@ input:not([type="email"]):focus:not([readonly]) {
         height: 150px;
         width: 150px;
         opacity: .2;
-        left: 32%;
+        left: 2%;
         bottom: 29%;
     }
     
     .home .circles.circle6 {
         animation: header-swing 9s infinite;
-        left: -14%;
-        top: 22%;
+        left: 5%;
+        top: 2%;
         height: 100px;
         width: 100px;
         opacity: .2;
@@ -909,7 +909,7 @@ input:not([type="email"]):focus:not([readonly]) {
         animation: header-swing 3s infinite;
         width: 50px;
         height: 50px;
-        right: 4%;
+        right: 2%;
         top: 40%;
         opacity: .2;
         background: #ea4335;
