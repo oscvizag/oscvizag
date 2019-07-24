@@ -1,0 +1,263 @@
+@media(max-width: 768px){
+	.header .nav .head  {
+		display: block;
+	}
+
+	.header {
+		width: 100%;
+		left: -100%;
+	}
+
+	.content.active {
+		left: 100%;
+	}
+
+	body.active {
+		overflow: hidden;
+	}
+
+	.hamburger img {
+		height: 20px;
+	}
+
+	.appteam-logo img {
+		height: 40px;
+		width: 35px;
+	}
+
+	.github-home-icon {
+		width: 70px;
+		padding-right: 0px;
+	}
+
+	.bloc5 {
+		padding: 100px 0px;
+	}
+
+	.bloc5 .sponsor-icons {
+		width: 90%;
+	}
+
+	.sponsor-icons .sponsor-icon img {
+		width: 80%
+	}
+
+	.sponsor-icons .sponsor-icon {
+		width: 49%;
+		padding: 5px;
+	}
+
+	.sponsor-icons .sponsor-icon.main-sponsor {
+		width: 100%;
+		display: block;
+		text-align: center;
+	}
+
+	.sponsor-icons .sponsor-icon.main-sponsor img {
+		width: 50%;
+		height: auto;
+	}
+
+	.faq {
+		font-size: 0.8em;
+	}
+
+	.bloc6 {
+		padding: 40px 0px;
+	}
+
+	.bloc2 .name, .bloc3 .name, .bloc4 .name {
+		font-size: 1.7em;
+	}
+
+	.bloc4 .img-back-left, .bloc2 .img-back-left {
+		width: 400px;
+		top: 5%;
+	}
+
+	.bloc4 .img-back-right, .bloc2 .img-back-left {
+		top: 40%;
+		right: -10%;
+	}
+
+	.bloc3 .track-icons {
+		width: 70%;
+	}
+
+	.bloc3 .a-track {
+		width: 100%;
+	}
+
+	.bloc3 .track-name {
+		font-size: 1em;
+	}
+
+	.bloc4-right {
+		left: 0px;	
+	}
+
+	.sponsor-icons .sponsor-icon.dev-icon img {
+		width: 90%;
+	}
+
+	.prize {
+		width: 90%;
+		margin: 5%;
+	}
+}
+
+@media(max-width: 949px){
+	.bloc1 {
+		height: auto;
+	}
+
+	.bloc1-left {
+		position: relative;
+		width: 100%;
+		height: auto;
+		text-align: center;
+		margin-bottom: 80px;
+	}
+
+	.bloc1-left .content {
+		text-align: center;
+		transform: none;
+	}
+
+	.bloc1-right {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding-top: 80px;
+		text-align: center;
+	}
+
+	.bloc1-right img {
+		position: static;
+		width: 60%;
+		transform: none;
+	}
+
+	.bloc2-left, .bloc4-left {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 0px 10px;
+	}
+
+	.bloc1-left .name {
+		font-size: 2em;
+	}
+
+	.bloc1-left .date {
+		font-size: 1em;
+	}
+
+	.sponsor-name {
+		font-size: 1.2em;
+	}
+
+	.bloc2-right, .bloc4-right {
+		position: relative;
+		width: 100%;
+		height: auto;
+		padding: 0px;
+		left: 0px;
+	}
+
+	.bloc2-left img, .bloc4-left img {
+		position: static;
+		transform: none;
+	}
+
+	.bloc2 .img-back-left, .bloc4 .img-back-left {
+		top: 5%;
+	}
+
+	.bloc2 .img-back, .bloc4 .img-back {
+		top: 50%;
+		width: 500px;
+	}
+
+	.bloc2, .bloc4 {
+		height: auto;
+	}
+
+	.bloc2-right {
+		padding: 0px 20px;
+	}
+
+	.bloc4-right {
+		padding-left: 30px;
+	}
+
+	.bloc4 .timeline {
+		width: 100%;
+	}
+
+	.bloc2 .content {
+		font-size: 1em;
+		padding: 30px 20px;
+	}
+}
+
+@media(min-width: 769px) and (max-width: 949px){
+	.fullOverlay.active {
+		display: block;
+		opacity: 1;
+	}
+
+	.header {
+		width: 30%;
+		left: -30%;
+	}
+
+	.content.active {
+		left: 30%;
+		filter: blur(1px);
+	}
+
+	body.active {
+		overflow: hidden;
+	}
+
+	.bloc3 .a-track {
+		width: 40%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+
+	.bloc3 .track-icons {
+		width: 70%;
+	}
+
+	.bloc3 .track-name {
+		font-size: 1em;
+	}
+
+	.prize {
+		width: 45%;
+		margin: 2.5%;
+	}
+}
+
+@media(min-width: 950px){
+	.fullOverlay.active {
+		display: block;
+		opacity: 1;
+	}
+
+	.header {
+		width: 25%;
+		left: -25%;
+	}
+
+	.content.active {
+		left: 25%;
+		filter: blur(1px);
+	}
+
+	body.active {
+		overflow: hidden;
+	}
+}
