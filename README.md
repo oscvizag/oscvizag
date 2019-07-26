@@ -1,2 +1,1 @@
-# EventPage
-V-ignite event Page
+# Vignite_EventPage
